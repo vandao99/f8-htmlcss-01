@@ -1,0 +1,649 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0F1B4C;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Common-- thanh phan dung chung */
+
+.content{
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+/* ============================Tam thoi====================== */
+a {
+    text-decoration: none;
+}
+.btn {
+    display: inline-block;
+    min-width: 98px;
+    padding: 18px 16px;
+    background: var(--primary-color);
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp,2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* Header */
+
+.header{
+    background-color: #E6F0FF;
+    height: 100vh;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 38px;
+}
+
+.navbar ul {
+    display: flex;
+    margin-left: 50px;
+}
+
+.navbar .action {
+    margin-left: auto;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #4F5361;
+    padding: 8px 14px;
+}
+ 
+.navbar ul a:hover {
+    text-decoration: underline;
+}
+
+.navbar .action a {
+    text-decoration: none;
+}
+
+.navbar .action-link {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.navbar .action-btn {
+    padding: 13px 16px;
+    margin-left: 18px;
+    border-radius: 8px;
+}
+
+.hero {
+    margin-top: 130px;
+}
+
+.hero .info {
+    width: 51%;
+}
+
+.hero .sub-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #687690;
+}
+
+.hero .title {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 1.1875;
+    /* or 119% */
+    color: #000336;    
+}
+.hero .desc {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.78;
+    /* or 178% */
+    color: #5A6473;
+}
+.hero .hero-cta {
+    margin-top: 40px;
+    min-width: 170px;
+    /* chua toi uu */
+    text-decoration: none;
+}
+
+.hero img {
+    position: absolute;
+    right: calc((100vw - 1110px) / 2 - 100px);
+    bottom: 0;
+}
+
+/* client */
+.client {
+    margin-top: 79px;
+    padding: 63px 0 64px;
+}
+
+.client .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .client .stars {
+    margin-left: auto;
+} co the dung cach khac len the cha space-between cho 2 the con xa nhau nhat co the */
+
+.client .desc {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: #7D8589;
+}
+.client .row-desc {
+    margin-top: 23px;
+}
+.client .images {
+    display: flex;
+    justify-content: space-between;
+    /* Can giua theo trc nam ngang align-item: center */
+    align-items: center;
+    margin-top: 96px;
+}
+
+/* Guides */
+.guides  {
+    margin-top: 40px;
+    padding: 93px 0 79px;
+}
+
+.guides .sub-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1;
+    text-align: center;
+    color: #000339;
+}
+
+.guides .sub-title::before {
+    position: absolute;
+    top:-10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* luu y co inline-block */
+    content: "";
+    display: inline-block;
+    width: 41px;
+    height: 4px;
+    background: #000339;
+    border-radius: 12px;
+}
+
+.guides .desc {
+    width: 459px;
+    max-width: 100%;
+    margin: 20px auto 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    /* or 188% */
+    text-align: center;
+    color: #5A6473;
+}
+.list-guide {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.list-guide .guide-item {
+    margin: 0 70px;
+    text-align: center;
+}
+.guide-item .title {
+    margin-top: 26px;
+    font-weight: 500;
+    font-size: 2.0rem;
+    line-height: 1.1;
+    /* identical to box height, or 110% */
+    color: #3B3C45;
+}
+
+.guide-item .link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #0689FF;
+}
+.guide-item .arrow {
+    margin-left: 8px;
+}
+
+.guide-cta {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.guide-cta .btn {
+    min-width: 170px;
+}
+
+/* Feature */
+.feature {
+    margin-top: 41px;
+    padding: 110px 0;
+    background: #F5FAFE;
+}
+
+.feature .sub-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #000339;
+}
+
+.feature .row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature .desc {
+    font-size: 1.6rem;
+    line-height: 1.88;
+    /* identical to box height, or 188% */
+    color: #5A6473;
+}
+.feature .link {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: #0689FF;
+}
+.feature .link .arrow {
+    margin-left: 8px;
+}
+
+.feature .list {
+    gap: 30px;
+    display: flex;
+    margin-top: 70px;
+}
+
+.feature .item {
+    background-color: #ffffff;
+    flex: 1;
+    border-radius: 12px;
+}
+
+.feature .item .thumb {
+    height: 227px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 12px ;
+    border-top-right-radius: 12px ;
+
+}
+
+.feature .body {
+    padding: 17px 20px 24px;
+}
+
+.feature .item .title a {
+    font-weight: 600;
+    font-size: 2.0rem;
+    line-height: 1.5;
+    color: #000339;
+}
+
+.feature .item .desc {
+    --line-clamp: 3;
+    margin-top: 11px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #A3A6AB;
+    /* chan dan link qua dai de lam vo giao dien */
+    word-break: break-all;
+}
+.feature .item .info {
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
+}
+
+.feature .item .icon:not(:first-child) {
+    margin-left: 23px;
+}
+
+.feature .item .label{
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+    color: #4D4D52;
+    
+}
+
+/* Stats */
+.stats {
+    margin-top: 75px;
+    padding: 50px 0;
+}
+
+.stats .content {
+    width: 1048px;
+}
+
+.stats .row {
+    display: flex;
+}
+
+.stats .img-block, .stats .info {
+    width: 50%;
+}
+
+.stats .img-block {
+    position: relative;
+}
+
+.stats .stats-trend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 239px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 12px 12px;
+    padding: 45px 22px 40px;
+}
+
+.stats .info {
+    padding: 79px 0 0 165px;
+}
+
+
+
+.stats .sub-title {
+    position: relative;
+    width: 269px;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.29;
+    color: #000339;
+}
+
+.stats .sub-title::before {
+    content: "";
+    top: -10px;
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 41px;
+    height: 4px;
+    background: #000339;
+    border-radius: 12px;
+}
+
+.stats .img-block .image {
+    display: block;
+    margin-left: auto;
+    width: 400px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.stats .info .desc {
+    width: 309px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #5A6473;
+}
+
+.stats .stats-trend .value {
+    font-weight: 700;
+    font-size: 2.6rem;
+    letter-spacing: 0.01em;
+    color: #000339;
+}
+
+.stats .stats-trend .icon {
+    margin-left: auto;
+}
+
+.stats .stats-trend .desc {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    /* or 150% */
+    color: #A7A7A7;
+}
+.stats .stats-trend .separate {
+    height: 1.2px;
+    margin-top: 25px;
+    background: #E9E9E9;
+}
+
+.stats .stats-trend .avatar-block {
+    display: flex;
+    /* cham toi ranh gioi tu xuong hang */
+    flex-wrap: wrap; 
+    gap :16px 14px;
+    margin-top: 26px;
+}
+.stats .stats-trend .avatar-group {
+    display: flex;
+}
+
+.stats .stats-trend .avatar-group .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    margin-left: -3px;
+    border-radius: 50%;
+    font-weight: 450;
+    font-size: 0.7rem;
+    color: #FFFFFF;
+}
+
+.stats .stats-trend .avatar-group .avatar :first-child {
+    margin-left: 0px;
+}
+
+.stats .stats-trend .avatar-name-1, .stats .stats-trend .avatar-name-6 {
+    background: #1F3BB1;
+}
+.stats .stats-trend .avatar-name-2 {
+    background: #24D6D9;
+}
+
+.stats .stats-trend .avatar-name-3 {
+    background: #F8C120;
+}
+
+.stats .stats-trend .avatar-name-4 {
+    background: #F97F6B;
+}
+
+.stats .stats-trend .avatar-name-5 {
+    background: #73A242;
+}
+
+.stats .row-qty {
+    justify-content: space-between;
+    margin-top: 110px;
+    padding: 0 32px;
+}
+
+.stats .row-qty .qty {
+    font-weight: 600;
+    font-size: 6.4rem;
+    color: #000000;
+}
+
+.stats .row-qty .qty-desc {
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2;
+    /* identical to box height */
+    color: #7B8087;
+    
+}
+/* subscription */
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .body {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 370px;
+    background: #063183;
+    border-radius: 20px;
+}
+
+.subscription .info {
+    width: 671px;
+    max-width: 100%;
+    padding: 0 80px;
+}
+
+.subscription .info .sub-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+.subscription .info .desc {
+    --line-clamp: 3;
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #FFFFFF;
+    opacity: 0.75;
+}
+
+.subscription .info .btn {
+    margin-top: 20px;
+    color: #002366;
+    min-width: 151px;
+    background: #FFFFFF
+}
+.subscription .body .image {
+    position: absolute;
+    bottom: 0;
+    right: 221px;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 55px;
+    padding: 50px 0 58px;
+}
+
+.footer .row {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.footer .row-top {
+    gap: 185px;
+}
+
+.footer .row-top .heading {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 2.0rem;
+    color: #1C1C1D;
+}
+
+.footer .row-top .list, .footer .row-top .desc {
+    margin-top: 42px;
+}
+
+.footer .row-top .list-item {
+    margin-top: 18px;
+}
+
+.footer .row-top .list-item a, .footer .row-top .desc{
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #7A7A7E;
+    white-space: nowrap;
+}
+
+.footer .row-top .desc {
+    white-space: normal;
+    line-height: 1.75;
+}
+
+.footer .row-top .social {
+    display: flex;
+    margin-top: 40px;
+}
+
+.footer .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+}
+
+.footer .social-link:hover {
+    background: #ededed;
+}
+
+.footer .row-bottom {
+    margin-top: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .row-bottom .copyright {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #C2C2C2;
+}
