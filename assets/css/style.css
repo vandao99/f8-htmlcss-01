@@ -6,6 +6,11 @@
     --primary-color: #0F1B4C;
 }
 
+html, body {
+    scroll-behavior: smooth;
+
+}
+
 html {
     font-size: 62.5%;
 }
@@ -52,16 +57,30 @@ a {
 }
 /* Header */
 
-.header{
+.fixed-header {
     background-color: #E6F0FF;
-    height: 100vh;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap{
+    background-color: #E6F0FF;
     position: relative;
+    /* Loai bo margin collapse 1. them thuocj tinh display : fex va flex-direction: column. 
+    Neu trong co 2 the content thi thuoc tinh nay se khong cho no thanh 2 hang */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -101,15 +120,12 @@ a {
     border-radius: 8px;
 }
 
-.hero {
-    margin-top: 130px;
-}
 
-.hero .info {
+.hero-wrap .info {
     width: 51%;
 }
 
-.hero .sub-title {
+.hero-wrap .sub-title {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -117,7 +133,7 @@ a {
     color: #687690;
 }
 
-.hero .title {
+.hero-wrap .title {
     margin-top: 8px;
     font-weight: 700;
     font-size: 6.4rem;
@@ -125,7 +141,7 @@ a {
     /* or 119% */
     color: #000336;    
 }
-.hero .desc {
+.hero-wrap .desc {
     margin-top: 30px;
     font-weight: 400;
     font-size: 1.8rem;
@@ -133,14 +149,14 @@ a {
     /* or 178% */
     color: #5A6473;
 }
-.hero .hero-cta {
+.hero-wrap .hero-wrap-cta {
     margin-top: 40px;
     min-width: 170px;
     /* chua toi uu */
     text-decoration: none;
 }
 
-.hero img {
+.hero-wrap img {
     position: absolute;
     right: calc((100vw - 1110px) / 2 - 100px);
     bottom: 0;
@@ -641,6 +657,12 @@ a {
     width: 28px;
     height: 28px;
     border-radius: 3px;
+    background: #F9F9F9;
+}
+
+/* tac dong vao  .social-link sau mot cai .social-link (tru vi dau tien, hay con lai la vi tri thu 2) */
+.footer .social-link + .social-link {
+    margin-left: 16px;
 }
 
 .footer .social-link:hover {
